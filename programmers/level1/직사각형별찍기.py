@@ -4,5 +4,5 @@
 a, b = map(int, input().strip().split(' '))
 
 a = ("*" * a) + "\n"
-b = a * (b-1)
+b = a * (b - 1)
 print(a + b)
