@@ -1,4 +1,4 @@
-# python-practice
+# escape-python-literacy
 
 ----
 ### 공부 계획
