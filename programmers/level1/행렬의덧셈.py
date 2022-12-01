@@ -23,3 +23,12 @@ def solution(arr1, arr2):
         for j in range(len(arr1[0])):
             answer[i][j] = arr1[i][j] + arr2[i][j]
     return answer
+
+    # Feedback
+    # 다른 사람의 풀이를 참조했을 때 행렬의 덧셈 반복문을 아예 처음부터 매트릭스 안에서 돌렸다.
+    # 대표적인 예시가 
+    # answer = [[c+d for c,d in zip(a,b)] a,b in for arr1,arr2]
+    # 이 미친사람은 한 문장으로 풀었다.
+    # 여기서 극강의 효율을 자랑하는 zip함수란 동일한 갯수의 자료형에 대해
+    # 인덱스 위치가 동일한 순서끼리 묶어주는 것이다.
+    # 따라서 양 행렬의 행(a,b) 요소들에 대해 열 값(c,d)들을 더해준 걸 매트릭스 내에 적재한다.
