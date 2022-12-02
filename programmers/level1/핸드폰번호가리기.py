@@ -11,18 +11,16 @@
 
 def solution(phone_number):
     answer = ''
-    for i in range(len(phone_number)):
-        if i>=(len(phone_number)-4):
-            answer += phone_number[i]
-            continue
-        
-        elif phone_number[i] == '-':
+    for i in range(len(phone_number)-4):
+        if phone_number[i] == '-':
             answer += phone_number[i]
             continue
         
         answer += '*'
+    
+    answer += phone_number[-4] + phone_number[-3] + phone_number[-2] + phone_number[-1]
 
     return answer
 
 
-print(solution('4444-4444444-4444'))
+print(solution('4444-4444444-444455'))

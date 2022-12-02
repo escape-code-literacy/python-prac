@@ -6,24 +6,17 @@
 
 def func(number):
     # TO-DO : 함수 구현하기
-    answer = None
+    answer = True
 
     a = str(number)
     result = 0
     for i in a:
         result = result + int(i)
 
-    count = 0
-
     for j in range(2,result):
         if result % j == 0:
-            count = count + 1
-
-    if count > 0:
-        answer = False
-
-    else:
-        answer = True
+            answer = False
+            break
         
     return answer
 
