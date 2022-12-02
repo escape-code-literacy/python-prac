@@ -5,25 +5,13 @@
 """
 
 def func(number):
-    """
-        func(123) -> False
-        func(11) -> True
-        func(171) -> False
-        func(1006) -> True
-    """
-    #TODO : 함수 구현하기
+    # TO-DO : 함수 구현하기
     answer = None
 
-    # a = str(number)
-    # result = 0
-    # for i in a:
-    #     result = result + int(i)
-
-    while  (number / 10) > 0 :
-
-
-
-        number = number / 10
+    a = str(number)
+    result = 0
+    for i in a:
+        result = result + int(i)
 
     count = 0
 
@@ -39,5 +27,5 @@ def func(number):
         
     return answer
 
-print(func(128))
+print(func(124))
 
