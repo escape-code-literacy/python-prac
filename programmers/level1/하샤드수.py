@@ -22,7 +22,9 @@
 # 입출력 예 #4
 # 13의 모든 자릿수의 합은 4입니다. 13은 4로 나누어 떨어지지 않으므로 13은 하샤드 수가 아닙니다.
 
-def solution(x):
+
+# 기존 자릿수 합을 구하는 솔루션1
+def solution1(x):
     answer = True
     number = 0
     temp = x
@@ -38,5 +40,34 @@ def solution(x):
     
     if temp % number != 0:
         answer = False
-        
+  
     return answer
+
+# 기존 자릿수 합을 구하는 솔루션2
+def solution2(x):
+    answer = True
+    number = sum(map(int, str(x)))
+    print(number)
+    
+    if x % number != 0:
+        answer = False
+  
+    return answer
+
+def solution3(x):
+    answer = True
+
+    # 원리1 - join 함수 : join은 iterable 객체를 .앞의 인자를 넣어서 합쳐 문자열로 반환함. 주로 ''.join(list)와 같이 list를 인자 없이 합쳐 문자열로 반환하는데 씀
+    # 원리2 - eval 함수 : eval은 문자열로 연산을 가능하게 하는 함수 ex) eval('1+2') = 3 이라는 결과가 나온다 
+    number = eval('+'.join(str(x)))
+    print(number)
+
+    if x % number != 0:
+        answer = False
+  
+    return answer
+
+
+print(solution1(11))
+print(solution2(11))
+print(solution3(11))

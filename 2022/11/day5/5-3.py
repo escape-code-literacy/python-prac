@@ -5,11 +5,11 @@ import random
 # letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
 letters = ''
 # 소문자 아스키코드 변환하여 문자열 생성
-for i in range(97,123):
+for i in range(ord('a'),ord('z')):
     letters += chr(i)
     
 # 대문자 아스키코드 변환하여 문자열 생성
-for I in range(65,91):
+for I in range(ord('A'),ord('Z')):
     letters += chr(I)
 
 # numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']

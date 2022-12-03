@@ -12,3 +12,4 @@ for score in student_scores:
         max_num = score
 
 print(f'The highest score in the class is: {max_num}')
+print(max(student_scores))
